@@ -1,9 +1,9 @@
 /* =========================================================
    JelajahNusa - script.js
-   1. Data paket          5. Validasi form
-   2. Helper              6. Form booking
-   3. Modal detail paket  7. Galeri & lain-lain
-   4. Notifikasi
+1. Data paket          5. Validasi form
+2. Helper              6. Form booking
+3. Modal detail paket  7. Galeri & lain-lain
+4. Notifikasi
    ========================================================= */
 'use strict';
 
@@ -189,6 +189,9 @@ function openPackage(id) {
     facilities.append(li);
   });
 
+  const scroller = $('.pm-scroll', packageModalEl);
+  if (scroller) scroller.scrollTop = 0;
+
   packageModal.show();
 }
 
@@ -203,6 +206,8 @@ document.addEventListener('click', (e) => {
 /* Simulasi pemesanan: tutup modal, arahkan ke form booking dengan paket terisi */
 $('#pm-order').addEventListener('click', () => {
   const id = activePackageId;
+  if (!id || !PACKAGES[id]) return;
+
   packageModalEl.addEventListener(
     'hidden.bs.modal',
     () => {

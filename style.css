@@ -19,15 +19,20 @@
 }
 
 html {
+  font-size: 14.5px;
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 88px;
 }
 
 body {
   font-family: var(--font-sans);
-  line-height: 1.65;
+  line-height: 1.6;
   overflow-x: hidden;
   background-color: #fcfcfa;
+}
+
+.container {
+  max-width: 1100px;
 }
 
 h1,
@@ -47,7 +52,7 @@ h3 {
 .btn {
   border-radius: 14px;
   font-weight: 700;
-  padding: 0.75rem 1.6rem;
+  padding: 0.7rem 1.45rem;
   transition: all 0.2s ease;
 }
 
@@ -56,11 +61,11 @@ h3 {
 }
 
 .btn-lg {
-  padding: 0.9rem 1.9rem;
+  padding: 0.8rem 1.65rem;
 }
 
 .btn-sm {
-  padding: 0.5rem 1.2rem;
+  padding: 0.48rem 1.1rem;
   border-radius: var(--radius-sm);
 }
 
@@ -152,15 +157,15 @@ h3 {
 /* Navbar - Mengatur menu navigasi melayang di bagian atas, logo brand, status menu aktif, dan tampilan menu di layar HP */
 .site-header {
   position: sticky;
-  top: 14px;
+  top: 12px;
   z-index: 1030;
   padding: 0 16px;
 }
 
 .site-nav {
-  max-width: 1180px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0.5rem 0.7rem 0.5rem 1.35rem;
+  padding: 0.45rem 0.65rem 0.45rem 1.25rem;
   background: rgba(255, 255, 255, 0.97);
   border: 1px solid rgba(22, 78, 63, 0.08);
   border-radius: 18px;
@@ -170,24 +175,24 @@ h3 {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: var(--primary-dark);
 }
 
 .brand i {
   color: var(--accent-hover);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
 }
 
 .site-nav .nav-link {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-main);
   border-radius: var(--radius-sm);
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   transition: background-color 0.2s;
 }
 
@@ -213,15 +218,17 @@ h3 {
 
 /* Hero - Mengatur banner utama halaman depan, overlay gelap agar teks terbaca, judul utama, dan kartu daftar harga cepat */
 .hero {
-  padding: 14px 16px 0;
+  padding: 12px 16px 0;
 }
 
 .hero-frame {
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: 750px;
-  max-height: 90vh;
+  max-width: 1160px;
+  margin: 0 auto;
+  min-height: 560px;
+  max-height: 80vh;
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: linear-gradient(135deg, #0e352b, #1d6b56 55%, #df9c20);
@@ -252,55 +259,47 @@ h3 {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
-  padding: 8rem 1.5rem 2.5rem;
+  max-width: 620px;
+  padding: 6rem 1.5rem 2.25rem;
   color: #fff;
 }
 
 .hero-content h1 {
-  font-size: 2.6rem;
+  font-size: clamp(2rem, 3.8vw, 3.35rem);
   font-weight: 700;
   line-height: 1.04;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .hero-lead {
-  font-size: 1.05rem;
-  max-width: 54ch;
-  margin-bottom: 2rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+  max-width: 50ch;
+  margin-bottom: 1.65rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 @media (min-width: 992px) {
   .hero-content {
-    padding: 8rem 3.5rem 3.5rem;
-  }
-
-  .hero-content h1 {
-    font-size: 4.2rem;
-  }
-
-  .hero-lead {
-    font-size: 1.18rem;
+    padding: 6rem 3rem 3rem;
   }
 }
 
 .hero-prices {
   position: absolute;
   z-index: 2;
-  right: 2.25rem;
-  bottom: 2.25rem;
-  width: 340px;
-  padding: 1.35rem 1.4rem 0.9rem;
+  right: 2rem;
+  bottom: 2rem;
+  width: 310px;
+  padding: 1.15rem 1.25rem 0.8rem;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-prices-title {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
@@ -310,15 +309,15 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 1rem;
+  gap: 0.9rem;
   width: 100%;
-  padding: 0.7rem 0;
+  padding: 0.6rem 0;
   border: 0;
   border-top: 1px solid var(--border-color);
   background: none;
   text-align: left;
   color: var(--text-main);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .hero-prices li:first-child button {
@@ -339,7 +338,7 @@ h3 {
   .hero-frame {
     flex-direction: column;
     align-items: stretch;
-    min-height: auto;
+    min-height: 440px;
     max-height: none;
   }
 
@@ -353,7 +352,7 @@ h3 {
 
 /* Sections & Keunggulan - Mengatur jarak antar bagian halaman, judul seksi, dan tata letak kartu keunggulan layanan */
 .block {
-  padding: 5.5rem 0;
+  padding: 4.25rem 0;
 }
 
 .block-tint {
@@ -361,34 +360,28 @@ h3 {
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
   font-weight: 700;
   color: var(--primary-dark);
 }
 
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 2.85rem;
-  }
-}
-
 .section-text {
-  max-width: 52ch;
-  margin-top: 1.15rem;
-  font-size: 1.06rem;
+  max-width: 50ch;
+  margin-top: 1rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
 .values {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.75rem;
+  gap: 1.35rem;
 }
 
 .value {
   display: flex;
-  gap: 1rem;
-  padding: 1.4rem;
+  gap: 0.9rem;
+  padding: 1.2rem;
   border-radius: var(--radius-lg);
   background: #fff;
   border: 1px solid var(--border-color);
@@ -400,38 +393,38 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.85rem;
-  height: 2.85rem;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 12px;
   color: var(--primary);
 }
 
 .value i {
   background-color: var(--primary-light);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 .value h3 {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.3rem;
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .value p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 575px) {
   .block {
-    padding: 4rem 0;
+    padding: 3.25rem 0;
   }
 
   .values {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.1rem;
   }
 }
 
@@ -439,8 +432,8 @@ h3 {
 .dest-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 300px;
-  gap: 18px;
+  grid-auto-rows: 255px;
+  gap: 16px;
 }
 
 .dest-bali {
@@ -498,23 +491,23 @@ h3 {
 }
 
 .dest-body {
-  padding: 1.6rem;
+  padding: 1.35rem;
 }
 
 .dest-body h3 {
   margin: 0;
-  font-size: 1.9rem;
+  font-size: 1.65rem;
   font-weight: 700;
 }
 
 .dest-bali .dest-body h3 {
-  font-size: 2.5rem;
+  font-size: 2.15rem;
 }
 
 .dest-body p {
-  margin: 0.35rem 0 0;
-  font-size: 0.95rem;
-  max-width: 36ch;
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  max-width: 34ch;
 }
 
 .dest-body .dest-loc {
@@ -523,13 +516,13 @@ h3 {
 }
 
 .dest-link {
-  margin-top: 0.9rem;
+  margin-top: 0.75rem;
   padding: 0;
   border: 0;
   background: none;
   color: #fff;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-decoration: underline;
   text-decoration-color: var(--accent);
 }
@@ -537,7 +530,7 @@ h3 {
 @media (max-width: 1199px) {
   .dest-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 280px;
+    grid-auto-rows: 240px;
   }
 
   .dest-bali,
@@ -556,50 +549,58 @@ h3 {
 @media (max-width: 767px) {
   .dest-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 320px;
+    grid-auto-rows: 250px;
   }
 
   .dest-bali {
     grid-column: auto;
   }
 }
+
 /* Galeri - Mengatur tata letak foto galeri bergaya kolase (bento grid) dan penyesuaiannya pada layar kecil */
 .gallery-wrap {
-  margin-top: 4.5rem;
+  margin-top: 3.75rem;
 }
+
 .gallery-title {
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--primary-dark);
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 170px;
-  gap: 14px;
+  grid-auto-rows: 150px;
+  gap: 12px;
 }
+
 .g {
   padding: 0;
   border: 0;
   border-radius: 14px;
   cursor: zoom-in;
 }
+
 .g1 {
   grid-column: span 2;
   grid-row: span 2;
 }
+
 .g3 {
   grid-row: span 2;
 }
+
 .g5,
 .g6 {
   grid-column: span 2;
 }
+
 @media (max-width: 767px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 135px;
   }
   .g3,
   .g5 {
@@ -610,6 +611,7 @@ h3 {
     grid-row: auto;
   }
 }
+
 /* Paket Wisata - Mengatur tampilan kartu paket liburan, lencana durasi hari, lokasi tujuan, dan tampilan harga */
 .pkg-card {
   border: 1px solid var(--border-color);
@@ -620,333 +622,426 @@ h3 {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+
 .pkg-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 22px 40px -22px rgba(14, 53, 43, 0.35);
 }
+
 .pkg-photo {
-  height: 210px;
+  height: 185px;
 }
+
 .pkg-card .card-body {
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
+
 .pkg-duration {
   align-self: flex-start;
-  margin-bottom: 0.9rem;
-  padding: 0.3rem 0.85rem;
+  margin-bottom: 0.75rem;
+  padding: 0.28rem 0.75rem;
   border-radius: 8px;
   background-color: var(--primary-light);
   color: var(--primary-dark);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
+
 .pkg-name {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.32rem;
   font-weight: 700;
 }
+
 .pkg-dest,
 .pm-dest {
   font-weight: 600;
   color: var(--text-muted);
 }
+
 .pkg-dest {
-  margin: 0.4rem 0 0;
-  font-size: 0.9rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.86rem;
 }
+
 .pkg-dest i,
 .pm-dest i {
   margin-right: 0.35rem;
   color: var(--accent-hover);
 }
+
 .pkg-highlight {
-  margin: 0.75rem 0 1.25rem;
+  margin: 0.65rem 0 1.05rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
+
 .pkg-foot {
   border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
+  padding-top: 0.85rem;
 }
+
 .pkg-price {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.8rem;
 }
+
 .pkg-price strong {
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: 1.38rem;
   color: var(--primary);
 }
+
 .pkg-price span {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
+
 /* Booking Section - Mengatur panel ringkasan pesanan di sisi kiri serta gaya kolom formulir pemesanan di sisi kanan */
 .booking {
-  margin-top: 4.5rem;
+  margin-top: 3.75rem;
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--border-color);
 }
+
 .booking-aside {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 2rem;
   background: linear-gradient(155deg, var(--primary-dark), var(--primary));
   color: #fff;
 }
+
 .booking-aside h3 {
-  font-size: 2.2rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.9rem;
+  margin-bottom: 0.65rem;
 }
+
 .booking-aside > p {
   color: rgba(255, 255, 255, 0.82);
+  font-size: 0.93rem;
 }
+
 .booking-empty-state {
   margin-top: auto;
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.08);
   border: 1px dashed rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
+
 .booking-empty-state i {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.55rem;
   color: var(--accent);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
+
 .summary {
-  margin: 1.5rem 0 0;
+  margin: 1.25rem 0 0;
+  font-size: 0.9rem;
 }
+
 .summary > div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.65rem 0;
+  padding: 0.55rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
+
 .summary dt {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.75);
 }
+
 .summary dd {
   margin: 0;
   text-align: right;
   font-weight: 600;
 }
+
 .summary .summary-total dt {
   color: #fff;
   font-weight: 700;
   align-self: center;
 }
+
 .summary .summary-total dd {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   color: var(--accent);
 }
+
 .booking-form {
   display: flex;
   align-items: center;
-  padding: 2.5rem;
+  padding: 2rem;
 }
+
 .booking-form form {
   width: 100%;
 }
+
 .form-label {
   font-weight: 600;
-  font-size: 0.92rem;
-  margin-bottom: 0.45rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
 }
+
 .form-control,
 .form-select {
-  padding: 0.8rem 1rem;
+  font-size: 0.92rem;
+  padding: 0.7rem 0.9rem;
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-sm);
   background-color: #fcfcfa;
 }
+
 .form-control:focus,
 .form-select:focus {
   border-color: var(--primary);
   background-color: #fff;
   box-shadow: 0 0 0 4px rgba(22, 78, 63, 0.12);
 }
+
 /* Contact - Mengatur kotak informasi kontak utama dan daftar tombol hubungi kami (Instragram, Email, Telepon, Alamat) */
 .contact-card-center {
-  max-width: 920px;
+  max-width: 860px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2.4rem 1.75rem;
   border-radius: var(--radius-xl);
   background: #fff;
   border: 1px solid var(--border-color);
 }
+
 .contact-list-grid {
-  margin: 2.5rem 0 0;
+  margin: 2rem 0 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1.2rem;
   text-align: left;
 }
+
 .contact-list-grid li {
   display: flex;
-  gap: 1rem;
+  gap: 0.9rem;
   align-items: center;
-  padding: 1.15rem 1.35rem;
+  padding: 1rem 1.2rem;
   border-radius: var(--radius-lg);
   background-color: var(--bg-soft);
   border: 1px solid var(--border-color);
+  font-size: 0.92rem;
 }
+
 .contact-list-grid i {
   background: #fff;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
+
 .contact-list-grid span,
 .pm-meta span {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-muted);
 }
+
 .contact-list-grid a {
   color: var(--text-main);
   font-weight: 700;
   text-decoration-color: var(--accent);
 }
+
 @media (max-width: 767px) {
   .contact-list-grid {
     grid-template-columns: 1fr;
   }
 }
-/* Modals (Detail Paket & Galeri) - Mengatur jendela pop-up untuk rincian paket wisata (itinerary & fasilitas) dan pratinjau foto galeri */
+
+/* Modals (Detail Paket & Galeri) - Proporsional & dapat di-scroll di HP, iPad, dan Laptop */
+#packageModal .modal-dialog {
+  max-width: 840px;
+  width: 92vw;
+  margin: 0.85rem auto;
+}
+
 .pm,
 .gm {
   border: 0;
   overflow: hidden;
 }
+
 .pm {
+  position: relative;
   border-radius: var(--radius-xl);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.pm-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  padding: 0.5rem;
+  opacity: 0.95;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pm-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto;
+}
+
 .pm-photo {
   position: relative;
   height: 100%;
-  min-height: 260px;
+  min-height: 240px;
 }
+
 .pm-body {
-  padding: 2rem;
+  padding: 1.5rem 1.75rem;
 }
+
 .pm-name {
   margin: 0;
-  font-size: 1.85rem;
+  padding-right: 1.75rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--primary-dark);
 }
+
 .pm-dest {
-  margin: 0.5rem 0 0;
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
 }
+
 .pm-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2.5rem;
-  margin: 1.4rem 0;
-  padding: 1rem 0;
+  gap: 0.75rem 2rem;
+  margin: 1.05rem 0;
+  padding: 0.8rem 0;
   border-block: 1px dashed var(--border-color);
 }
+
 .pm-meta strong {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: var(--primary);
 }
+
 .pm-desc {
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
+
 .pm-sub {
-  margin: 1.5rem 0 0.75rem;
-  font-size: 1.15rem;
+  margin: 1.15rem 0 0.55rem;
+  font-size: 1.02rem;
   font-weight: 700;
 }
+
 .pm-itinerary {
-  padding-left: 1.2rem;
+  padding-left: 1.15rem;
   margin: 0;
+  font-size: 0.9rem;
 }
+
 .pm-itinerary li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
+
 .pm-itinerary li::marker {
   color: var(--primary);
   font-weight: 700;
 }
+
 .pm-facilities,
 .pm-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .pm-facilities {
-  gap: 0.5rem 1.25rem;
+  gap: 0.45rem 1rem;
 }
+
 .pm-facilities li {
   display: flex;
-  gap: 0.55rem;
-  font-size: 0.95rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.88rem;
 }
+
 .pm-facilities i {
   color: #2f8f67;
+  margin-top: 0.15rem;
 }
+
 .pm-actions {
-  gap: 0.75rem;
-  margin-top: 2rem;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
 }
+
 .pm-actions .btn {
   width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-/* Fix modal scroll on mobile - Memastikan pop-up dapat digulir (scroll) dengan lancar dan pas di layar ponsel */
+
 @media (max-width: 767px) {
-  .modal.show {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+  #packageModal .modal-dialog {
+    width: 92vw;
+    margin: 0.75rem auto;
   }
-  .modal-dialog {
-    margin: 0.75rem auto !important;
-    width: 92vw !important;
-    max-width: 92vw !important;
-  }
+
   .pm {
-    display: block !important;
-    max-height: 82vh !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
+    max-height: 84vh;
     border-radius: var(--radius-lg);
-    padding: 0 !important;
   }
+
   .pm-photo {
-    min-height: 170px !important;
-    max-height: 180px !important;
+    min-height: 165px;
+    max-height: 175px;
   }
+
   .pm-body {
-    padding: 1.25rem 1.25rem 1.75rem !important;
+    padding: 1.2rem 1.25rem 1.5rem;
   }
+
   .pm-facilities,
   .pm-actions {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
+
 .gm {
   border-radius: var(--radius-lg);
 }
+
 .gm-photo {
   aspect-ratio: 4 / 3;
 }
+
 .gm-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.9rem 1.25rem;
+  padding: 0.85rem 1.2rem;
 }
+
 /* Toast & Footer - Mengatur notifikasi pesan pop-up singkat (toast) dan bagian penutup halaman paling bawah (footer) */
 .app-toast {
   border: 0;
@@ -954,26 +1049,31 @@ h3 {
   background-color: var(--primary-dark);
   color: #fff;
 }
+
 .app-toast .toast-body {
   display: flex;
   flex-direction: column;
-  padding: 0.9rem 0.75rem;
+  padding: 0.85rem 0.75rem;
 }
+
 .app-toast .btn-close {
   filter: invert(1);
 }
+
 .toast-icon {
   align-self: flex-start;
-  margin: 0.95rem 0 0 1rem;
+  margin: 0.9rem 0 0 0.95rem;
   color: var(--accent);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
+
 .site-footer {
-  padding: 2rem 0;
+  padding: 1.75rem 0;
   background-color: var(--primary-dark);
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
+
 .site-footer strong {
   color: #fff;
 }
